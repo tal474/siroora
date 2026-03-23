@@ -155,16 +155,6 @@
 
       if (expression === '') {
         resultEl.textContent = '0';
-        return;
-      }
-
-      try {
-        const val = eval(expression);
-        if (!isNaN(val) && isFinite(val)) {
-          resultEl.textContent = parseFloat(val.toFixed(10)).toString();
-        }
-      } catch {
-        // incomplete expression — keep showing last valid result
       }
     }
 
